@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Terminal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="background">
+    <div id="taskbar"></div>
+    <div id="sfondo"></div>
+  </div>
+    
+  <div id="terminal-window" class="resizable">
+
+    <div class="window-bar" id="drag-bar">
+
+      <div class="bar-left">
+        <img src="assets/kali-terminal.png" alt="kali logo" class="kali-logo" />
+      </div>
+
+      <span class="title">duck@duck:~</span>
+
+      <div class="buttons">
+        <span class="btn left">_</span>
+        <span class="btn middle">□</span>
+        <span class="btn right"> X </span>
+      </div>
+      
+    </div>
+        
+    <div id="terminal">
+      <div id="output"></div>
+    </div>
+  </div>
+    
+</body>
+
+<script src="script.js"></script>
+
+</html>

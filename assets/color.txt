@@ -1,0 +1,6 @@
+TERMINAL
+
+blue: #033dfc
+green: #03fc98
+backgroundblack: 
+text: #c5c8c6
