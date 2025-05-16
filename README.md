@@ -14,7 +14,8 @@ Built to simulate a real command-line interface while presenting personal and pr
 - 🖱️ Draggable terminal window with full mouse support
 - ↘️ Resizable via bottom-right corner
 - 🖥️ Double-click title bar or press center button to toggle fullscreen
-- 🔲 Functional window buttons (close, minimize, maximize) – visually styled and responsive
+- 🔲 Functional window buttons (minimize, maximize) – visually styled and responsive
+- 📱Mobile version
 
 ---
 
@@ -23,8 +24,8 @@ Built to simulate a real command-line interface while presenting personal and pr
 - [x] Command parsing and simulated shell
 - [x] Project viewer with collapsible panels
 - [x] Auto-completion and history navigation
+- [X] Mobile version: touch-based terminal simulator
 - [ ] Prompt formatting (e.g., `┌─(user㉿host)-[~/folder]`)
-- [ ] Mobile version: touch-based terminal simulator
 - [ ] Functional window buttons (close, minimize, maximize)
 - [ ] Minimize to taskbar + restoration click
 - [ ] Folder simulation (`cd`, `ls`, etc.)
