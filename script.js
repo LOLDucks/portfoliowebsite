@@ -29,6 +29,8 @@ function handleCommand(cmd) {
   if (cmd === "clear") {
     output.innerHTML = "";
     appendOutput("[+] Type 'help' to see available commands.");
+    addInputPrompt();
+
   } else if (validCommands.includes(cmd)) {
     fetch(`assets/responses/${cmd}.html`)
       .then(res => {
@@ -40,10 +42,15 @@ function handleCommand(cmd) {
         container.innerHTML = html;
         output.appendChild(container);
         scrollToBottom();
+        addInputPrompt();
       })
-      .catch(() => appendOutput(`[-] Unknown command: ${cmd}`));
+      .catch(() => {
+        appendOutput(`[-] Unknown command: ${cmd}`);
+        addInputPrompt();
+      });
   } else {
     appendOutput(`[-] Unknown command: ${cmd}`);
+    addInputPrompt();
   }
 }
 
@@ -103,7 +110,6 @@ function addInputPrompt() {
       historyIndex = -1;
       inputField.disabled = true;
       handleCommand(partial);
-      setTimeout(addInputPrompt, 50);
     }
 
     if (e.key === "ArrowUp") {
