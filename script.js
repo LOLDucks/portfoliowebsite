@@ -3,16 +3,7 @@ const dragBar = document.getElementById("drag-bar");
 const output = document.getElementById("output");
 
 if (window.innerWidth < 768 || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-  document.body.innerHTML = `
-    <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background: black; color: red; font-family: monospace; text-align: center; padding: 20px;">
-      <div>
-        <h1 style="margin-bottom: 1rem;">[!] ACCESSO NEGATO</h1>
-        <p>Questo portfolio è progettato per essere visualizzato su PC desktop o laptop.</p>
-        <p>Per favore accedi da un dispositivo con schermo più ampio.</p>
-      </div>
-    </div>
-  `;
-  throw new Error("Blocco visualizzazione su dispositivi mobili.");
+  window.location.href = "mobile.html";
 }
 
 
@@ -30,7 +21,6 @@ function handleCommand(cmd) {
     output.innerHTML = "";
     appendOutput("[+] Type 'help' to see available commands.");
     addInputPrompt();
-
   } else if (validCommands.includes(cmd)) {
     fetch(`assets/responses/${cmd}.html`)
       .then(res => {
@@ -104,13 +94,14 @@ function addInputPrompt() {
     const partial = inputField.value.trim();
 
     if (e.key === "Enter") {
-      if (partial !== "") {
-        commandHistory.unshift(partial);
-      }
+    if (partial !== "") {
+      commandHistory.unshift(partial);
+    }
       historyIndex = -1;
       inputField.disabled = true;
       handleCommand(partial);
     }
+
 
     if (e.key === "ArrowUp") {
       if (commandHistory.length > 0 && historyIndex < commandHistory.length - 1) {

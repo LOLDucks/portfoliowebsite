@@ -136,7 +136,6 @@ body, html {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    white-space: pre-wrap;
     font-family: "Fira Code", monospace;
     background: transparent;
 }

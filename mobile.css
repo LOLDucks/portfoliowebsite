@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-color: #000f18; /* come il terminale desktop */
+  color: #c5c8c6; /* colore testo terminale Kali */
+  font-family: "Fira Code", monospace;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#mobile-terminal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#output {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden; /* blocca scroll orizzontale */
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.4) rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar (WebKit) */
+#output::-webkit-scrollbar {
+  width: 8px;
+}
+#output::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+#output::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.4);
+  border-radius: 4px;
+}
+#output::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 160, 160, 0.6);
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+button {
+  background: #111;
+  color: #00bfff; /* azzurro Kali */
+  border: 1px solid #00bfff;
+  padding: 0.5rem 1rem;
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #3390ff;
+}
