@@ -257,3 +257,11 @@ details[open] summary::before {
   margin-left: 2rem;
   margin-top: 0.3rem;
 }
+
+.project-image {
+  display: block;
+  margin: 1rem auto; /* centra l'immagine */
+  width: 30%;
+  max-width: 100%;
+  height: auto;
+}

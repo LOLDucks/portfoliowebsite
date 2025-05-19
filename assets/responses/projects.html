@@ -1,23 +1,189 @@
 <section id="projects">
   <p style="margin: 0;">Click to expand. <br> <br></p>
+  <!--   3D printer   -->
   <details>
-    <summary>3D Printer with Klipper</summary>
-    <div class="details-content">Customized CR-10 with Klipper, BTT SKR Mini, and Raspberry Pi 5. Full firmware tuning, fan control, and optimized prints.</div>
+  <summary>3D Printer Upgrade - Klipper on CR-10</summary>
+    <div class="details-content">
+      
+        <img src="/assets/printer.png" alt="Main 3D printer image" class="project-image">
+
+        <p>
+          I upgraded my Creality CR-10 by installing <strong>Klipper firmware</strong> to achieve faster, more stable, and more precise prints.
+          The control system is based on a <strong>BIGTREETECH SKR Mini E3 V3.0</strong> board and a <strong>Raspberry Pi 5</strong>,
+          with web-based management via <strong>Fluidd</strong>, which also supports live webcam streaming.
+        </p>
+
+        <h3>Main Modifications:</h3>
+        <ul>
+          <li>Replaced mainboard with <strong>BIGTREETECH SKR Mini E3 V3.0</strong></li>
+          <li>Added <strong>Raspberry Pi 5</strong> for remote management through Fluidd and Klipper</li>
+          <li>Installed external power supply and fans for improved cooling</li>
+          <li>Repurposed a plastic box as a custom control unit: removed original display, ensured proper airflow, and installed BTT board</li>
+          <li>Added second motor for the Z-axis</li>
+          <li>Reinforced the frame and added anti-vibration feet</li>
+          <li>Modified extruder and cooling fan</li>
+          <li>Integrated <strong>BLTouch</strong> for auto bed leveling</li>
+        </ul>
+
+        <h3>Why this project:</h3>
+        <p>
+          The goal was to create a quieter, faster, and modular machine, perfect for rapid prototyping.
+          This upgrade also gave me the opportunity to deepen my knowledge of Klipper, GPIO pin management,
+          and interfacing between microcontroller and Raspberry Pi.
+        </p>
+
+        <h3>Challenges Faced:</h3>
+        <ul>
+          <li>Firmware flashing issues: Windows added hidden folders to the SD card that broke the update. Solved using Linux to clean the card.</li>
+          <li>Lack of compatible cables: hand-built custom wiring with crimping and soldering.</li>
+        </ul>
+
+        <img src="/assets/cbprinter.png" alt="Control box and wiring image" class="project-image">
+    
+    </div>
   </details>
+
+  <!--   CTF Bash script   -->
   <details>
     <summary>CTF Bash Scripts</summary>
-    <div class="details-content">Collection of Bash tools to automate reconnaissance, enumeration, and payload setup in CTFs. Modular and extensible.</div>
+    <div class="details-content">
+      
+      <p>Collection of Bash tools for automating CTF procedures.</p>
+
+      <a href="https://github.com/LOLDucks/network-recon">Auto recon, netdiscover + nmap.</a>
+    
+    </div>
   </details>
+
+    <!--   ChatGPT   -->
+  <details>
+    <summary>Pentest GPT - Custom ChatGPT for CTF & Penetration Testing</summary>
+    <div class="details-content">
+      
+      <p>
+        This project is a customized version of ChatGPT, designed specifically to assist with <strong>penetration testing, Capture The Flag (CTF) challenges, and debugging</strong>.
+        It's tailored for intermediate users aiming to boost their efficiency, autonomy, and practical understanding.
+      </p>
+
+      <h3>Main Features:</h3>
+      <ul>
+        <li>Follows a strict, minimalist workflow: no unnecessary text, no skipped steps</li>
+        <li>Explains every command clearly, but only when needed</li>
+        <li>Waits for user confirmation before proceeding to the next step</li>
+        <li>Maintains session state and avoids repetition</li>
+        <li>Always provides official sources (CVE, docs, articles) for exploits and tools</li>
+        <li>Operates under the assumption of a Kali Linux / VirtualBox setup</li>
+        <li>Supports OSINT, password list generation, scan strategy, and live debugging</li>
+      </ul>
+
+      <h3>Why this project:</h3>
+      <p>
+        I built this GPT to support my daily workflow in CTF and real-world pentests.
+        It helps structure actions, maintain context, and reduce the mental load during complex engagements—while still requiring full user control over the process.
+      </p>
+
+      <p>
+        <strong>Link:</strong>
+        <a href="https://chatgpt.com/g/g-67d9894bd0808191b85d0f34bac8b8c4-pentest" target="_blank">
+          Open Pentest GPT
+        </a>
+      </p>
+
+    </div>
+  </details>
+
+  <!--   Portfolio Website   -->
   <details>
     <summary>Portfolio Website</summary>
-    <div class="details-content">Terminal-style personal website built with HTML, CSS, JS. Features command-line navigation and animated UI.</div>
+    <div class="details-content">
+      <p>Terminal-style personal website built with HTML, CSS, JS. Features command-line navigation and animated UI.</p>
+
+      Link: <a href="https://lolducks.github.io/portfoliowebsite/"> already here </a>
+    </div>
   </details>
+
+  <!--   ESP32 Drone   -->
   <details>
     <summary>Work in Progress - ESP32 Drone</summary>
-    <div class="details-content">Autonomous drone using ESP32, remote telemetry and flight control planned. Integration with custom controller.</div>
+    <div class="details-content">
+      
+      <img src="/assets/drone.png" alt="ESP32 Drone" class="project-image">
+      <p>
+        This custom drone project is built using <strong>two ESP32-S3 modules</strong> — one dedicated to camera streaming and the other for flight control.
+        The goal is to develop a low-cost, modular drone platform with real-time telemetry and video feed.
+      </p>
+
+      <h3>Main Components:</h3>
+      <ul>
+        <li><strong>Motors:</strong> RS2205 2300KV brushless motors</li>
+        <li><strong>Battery:</strong> 4S 3300mAh 50C LiPo</li>
+        <li><strong>Flight sensors:</strong> TOF400C (distance), PMW3901 (optical flow), HMC5883 (magnetometer)</li>
+        <li><strong>Microcontroller:</strong> SP32-S3 for control, ESP32-CAM for camera</li>
+      </ul>
+
+    </div>
   </details>
+
+ <!--   PenTest tools   -->
   <details>
-    <summary>Work in Progress - RF Pentesting Tools</summary>
-    <div class="details-content">Jammer, CC1101 packet injector, and 2.4GHz manipulation tools. Based on ESP32 and tested against common IoT devices.</div>
+    <summary>Work in Progress - EDC Pentesting Tools</summary>
+    <div class="details-content">
+
+      <img src="/assets/edc.png" alt="EDC Multi-Tool Device" class="project-image">
+
+        <p>
+          This custom-built EDC (Every Day Carry) device combines multiple ESP32-based pentest tool into a single portable toolkit for wireless security research and experimentation.
+        </p>
+
+        <h3>Key Features:</h3>
+        <ul>
+          <li><strong>Dual nRF24L01 Modules:</strong> Enables BLE and Bluetooth jamming, as well as BLE advertisement spoofing, inspired by tools like RF-Clown.</li>
+          <li><strong>ESP32-WROOM-32U:</strong> Equipped with an external antenna to extend Wi-Fi range, supporting functionalities similar to the ESP32 Marauder, including Wi-Fi scanning, deauthentication attacks, and packet injection.</li>
+          <li><strong>CC1101 Sub-GHz Transceiver:</strong> Facilitates scanning, capturing, and replaying signals in sub-1 GHz frequencies (e.g., 315, 433, 868, 915 MHz), useful for interacting with devices like garage doors and remote key fobs.</li>
+          <li><strong>Infrared (IR) LEDs:</strong> Allows for IR signal transmission to control or interfere with IR-based devices.</li>
+        </ul>
+
+        <h3>Purpose:</h3>
+        <p>
+          The goal of this project is to create a versatile, portable device that consolidates multiple wireless testing tools into one. It's intended for educational purposes, allowing for the exploration and understanding of various wireless communication protocols and their potential vulnerabilities.
+        </p>
+
+    </div>
   </details>
+
+  <!--   Pwnagotchi   -->
+  <details>
+    <summary>Work in Progress - Pwnagotchi  </summary>
+    <div class="details-content">
+
+      <img src="/assets/pwn.png" alt="Pwnagotchi device" class="project-image">
+
+      <p>
+        This project is a build of <strong>Pwnagotchi</strong>, an AI-powered tool designed to automate the collection of WPA/WPA2 handshakes by passively listening to WiFi traffic.
+        It uses <strong>bettercap</strong> under the hood and evolves over time, optimizing its behavior to capture more handshakes efficiently.
+      </p>
+
+      <h3>Hardware Setup:</h3>
+      <ul>
+        <li><strong>Raspberry Pi Zero W</strong> as the main board</li>
+        <li><strong>eInk display</strong> for minimalist output and status</li>
+        <li><strong>External WiFi adapter</strong> (monitor mode capable) for extended range and reliability</li>
+        <li><strong>Portable battery pack</strong> for mobile operations</li>
+      </ul>
+
+      <h3>Features:</h3>
+      <ul>
+        <li>AI-assisted learning to improve capture efficiency</li>
+        <li>Captures WPA/WPA2 handshakes in real time</li>
+        <li>Fully automated, headless operation</li>
+        <li>Custom config for plugins, auto-save, and status messages</li>
+      </ul>
+
+      <p>
+        The Pwnagotchi interacts with its environment, adapting its scan and deauth strategy based on the networks detected. Ideal for pentesting training, wardriving, or offline password auditing.
+      </p>
+
+    </div>
+  </details>
+
 </section>

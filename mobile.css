@@ -73,3 +73,12 @@ button:hover {
   color: #ffffff;
   border-color: #3390ff;
 }
+
+.project-image {
+  display: block;
+  margin: 1rem auto; /* centra l'immagine */
+  width: 40%;
+  max-width: 100%;
+  height: auto;
+}
+
