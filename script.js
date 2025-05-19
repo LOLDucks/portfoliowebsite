@@ -107,7 +107,7 @@ function addInputPrompt() {
       if (commandHistory.length > 0 && historyIndex < commandHistory.length - 1) {
         historyIndex++;
         inputField.value = commandHistory[historyIndex];
-        inputField.dispatchEvent(new Event("input")); // aggiorna ghost
+        inputField.dispatchEvent(new Event("input"));
       }
     }
 
